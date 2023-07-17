@@ -16,18 +16,21 @@ const NavBar = () =>{
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Link className='nav-link' to="/">Inicio</Link>
+            {/* <Link className='nav-link' to="/">Pokemon</Link> */}
+            <Link className='nav-link' to="/productos/poleras">Poleras</Link>
+            <Link className='nav-link' to="/productos/zapatillas">Zapatillas</Link>
             <Link className='nav-link' to="/nosotros">Nosotros</Link>
             <Link className='nav-link' to="/contacto">Contacto</Link>
             
           </Nav>
           <Nav>
           
-            <Nav.Link href="#memes">
+            <Nav.Link href="">
 
-            <Button variant="primary">
+            {/* <Button variant="primary">
             Carrito de Compras <Badge bg="secondary">9</Badge>
             <span className="visually-hidden">Artículos en carrito</span>
-            </Button>
+            </Button> */}
 
             
             </Nav.Link>

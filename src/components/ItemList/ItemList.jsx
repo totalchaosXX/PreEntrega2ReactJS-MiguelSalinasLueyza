@@ -1,38 +1,34 @@
-import ItemCard from "../ItemCard/ItemCard"
+import Buscador from "../Buscador/Buscador";
+import ItemCard from "../ItemCard/ItemCard";
 
+const ItemnList = ({ items }) => {
 
-const ItemnList = ({items}) =>{
-    return (
+  console.log(items)
+  return (
+    <div className="container my-5">
+      <h1>Listado de productos</h1>
 
-        <div className='container my-5'>
-            <h1>Listado de productos</h1>
+      <hr />
 
-            <hr/>
+    
+      {/* <Buscador/> */}
+      
 
-            {/* {
+      {/* {
                 productos.length===0
                 ? "No hay productos aún"
                 : "Ya se cargaron los productos"
             } */}
 
-            <div className='row'>
-                {
-                    items.map((prenda) => (
-                       <ItemCard key={prenda.id} {...prenda}/>
-                    ))
-                }
+      <div className="row">
+        {items.map((prenda) => (
+          <ItemCard key={prenda.ID} {...prenda} />
+        ))}
+      </div>
 
-            </div>
-            
 
-           {/* <Cards titulo="Guitarra Flamenca" descripcion="Guitarra flamenca Abeto" />
-           <Cards titulo="Guitarra Clásica" descripcion="Guitarra clásica Cedro" />
-           <Cards titulo="Guitarra Eléctrica" descripcion="Guitarra eléctrica Telecaster" /> */}
+    </div>
+  );
+};
 
-        </div> 
-    )
-}
-
-export default ItemnList
-
- 
+export default ItemnList;

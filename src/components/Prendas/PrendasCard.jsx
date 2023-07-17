@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 import Card from 'react-bootstrap/Card';
+import { useFetch } from "../../hooks/useFetch";
 
 const PrendasCard = ({url})=> {
+
+    //const {data: prenda} = useFetch(url)
 
     const [prenda, setPrenda] = useState(null)
 
@@ -21,8 +24,10 @@ const PrendasCard = ({url})=> {
 
 
                 <div className="card">
-                    <img src={prenda.sprites.front_default} alt={prenda.name} className="card-img-top" />
                     <div className="card-body">
+
+                         <img src={prenda.sprites.front_default} alt={prenda.name} className="img-fluid" />
+
                         <h5 className="card-title">{prenda.name}</h5>
                         <hr/>
                         <button className="btn btn-primary">Ver más</button>
